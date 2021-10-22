@@ -10,10 +10,9 @@ import cv2
 import sys
 
 
-
-def run_opencv_camera(camera_name):
+def run_read(camera_name):
     video_stream_path = camera_name
-    if camera_name != 999:
+    if camera_name == 999:
         video_stream_path = "4.avi"  # local camera (e.g. the front camera of laptop)
     cap = cv2.VideoCapture(video_stream_path)
 
@@ -28,4 +27,4 @@ def run_opencv_camera(camera_name):
 
 
 if __name__ == '__main__':
-    run_opencv_camera(999)
+    run_read(0)
